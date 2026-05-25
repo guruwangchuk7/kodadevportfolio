@@ -186,6 +186,10 @@ button {
   transition: transform var(--transition-speed) var(--ease-function), opacity var(--transition-speed) var(--ease-function);
 }
 
+.mobile-only-cta {
+  display: none;
+}
+
 /* Mobile Navbar active override states */
 @media (max-width: 768px) {
   .navbar-center {
@@ -208,6 +212,21 @@ button {
 
   .mobile-toggle {
     display: flex;
+  }
+
+  .navbar-right .btn-pill-gray {
+    display: none;
+  }
+
+  .mobile-only-cta {
+    display: block;
+    background-color: var(--color-button-bg);
+    color: var(--color-button-text) !important;
+    text-align: center;
+    padding: 12px 24px;
+    border-radius: var(--border-radius-pill);
+    margin-top: 10px;
+    font-weight: 600;
   }
 
   .navbar-right {
@@ -807,6 +826,55 @@ button {
   padding: 1px 4px;
   border-radius: 2px 2px 0 0;
   white-space: nowrap;
+}
+
+/* Responsive adjustments for Developer Console */
+@media (max-width: 768px) {
+  .left-sidebar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 100;
+    width: 200px;
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+  }
+  .left-sidebar.collapsed {
+    width: 0;
+  }
+
+  .right-sidebar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    z-index: 100;
+    width: 200px;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+  }
+  .right-sidebar.collapsed {
+    width: 0;
+  }
+  
+  .console-section {
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-frame {
+    height: 500px;
+  }
+  
+  .code-viewport {
+    padding: 12px;
+  }
+  
+  .terminal-panel {
+    height: 160px;
+  }
 }
 
 /* -------------------------------------------------------------
@@ -1616,6 +1684,11 @@ button {
     padding: 24px;
   }
   
+  .featured-founder-portrait-box {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1633,4 +1706,324 @@ button {
     gap: 40px;
     padding: 30px 24px;
   }
+}
+
+/* -------------------------------------------------------------
+   Mobile Safety Spacing — General Sections & Wrappers
+   ------------------------------------------------------------- */
+
+/* FAQ accordion: prevent overflow on small viewports */
+@media (max-width: 768px) {
+  .faq-accordion {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .faq-trigger {
+    font-size: 14px;
+    padding: 18px 0;
+  }
+
+  .faq-item.active .faq-panel {
+    max-height: 300px; /* more room for longer answers on mobile */
+  }
+}
+
+/* Projects header row: stack title + link vertically on mobile */
+@media (max-width: 768px) {
+  .projects-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+}
+
+/* CTA section: tighten vertical padding on mobile */
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 70px 0;
+  }
+
+  .cta-title {
+    letter-spacing: -0.8px;
+    word-break: break-word;
+  }
+}
+
+/* Footer: safe horizontal padding on very small screens */
+@media (max-width: 480px) {
+  .footer-wrapper {
+    padding: 60px 0;
+  }
+
+  .footer-bottom {
+    padding-top: 24px;
+  }
+}
+
+/* Section headings: prevent letter-spacing overflow on xs screens */
+@media (max-width: 480px) {
+  .section-main-title {
+    font-size: 26px;
+    letter-spacing: -0.6px;
+  }
+
+  .hero-trust-text {
+    font-size: 12px;
+  }
+
+  .hero-subheadline {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .section-padding {
+    padding: 60px 0;
+  }
+
+  /* Contact card on xs */
+  .contact-panel-card {
+    padding: 24px 16px;
+    gap: 28px;
+  }
+}
+
+/* Tech stack tabs: horizontal scroll on mobile instead of ugly wrapping */
+@media (max-width: 600px) {
+  .tech-tabs-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+    gap: 8px;
+  }
+
+  .tech-tab-btn {
+    flex-shrink: 0;
+  }
+}
+
+/* Team card role subtitle */
+.team-card-role {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+  margin-bottom: 10px;
+  letter-spacing: 0.2px;
+}
+
+/* =============================================================
+   iPhone Safari Optimisations
+   Target: iPhone widths only (≤ 430px) via supports + safari
+   Philosophy: safe-area insets + dvh; zero desktop impact.
+   ============================================================= */
+
+/*
+  1. Smooth scroll & overscroll behaviour
+     – prevents the rubber-band bounce from causing layout jumps
+     – -webkit-overflow-scrolling is legacy; modern Safari uses
+       the automatic compositor path so we just ensure body scrolls
+       naturally and children don't intercept it.
+*/
+html {
+  scroll-behavior: smooth;
+  /* Prevent horizontal overflow causing page-width issues on Safari */
+  overflow-x: clip;
+}
+
+body {
+  /* Momentum scrolling on iOS – ensures the page scrolls smoothly */
+  -webkit-overflow-scrolling: touch;
+  /* Prevent horizontal shift when mobile drawer opens */
+  overflow-x: clip;
+}
+
+/*
+  2. Fixed navbar — account for iPhone safe-area-inset-top
+     (notch, Dynamic Island, status bar).
+     @supports ensures only Safari with env() support is targeted.
+*/
+@supports (padding-top: env(safe-area-inset-top)) {
+  .navbar-wrapper {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  /* The navbar inner container height stays 80px;
+     the wrapper grows by the safe-area so brand/links
+     are never behind the status bar. */
+}
+
+/*
+  3. Hero section — compensate for the taller navbar on iPhones.
+     On iPhones with notch/Dynamic Island the navbar-wrapper grows
+     by env(safe-area-inset-top) (≈ 47–59px), so hero needs more
+     padding-top to clear it.
+     We layer two values: the base 180px stays for non-supporting
+     browsers; supporting browsers get base + inset.
+*/
+@supports (padding-top: env(safe-area-inset-top)) {
+  @media (max-width: 768px) {
+    .hero-section {
+      /* 140px (existing mobile value) + navbar-height(80px) + safe-area */
+      padding-top: calc(140px + env(safe-area-inset-top));
+    }
+  }
+}
+
+/*
+  4. Mobile nav drawer — keep it flush below the taller fixed bar
+*/
+@supports (padding-top: env(safe-area-inset-top)) {
+  @media (max-width: 768px) {
+    .navbar-center.mobile-active {
+      /* top = navbar container height + safe-area inset */
+      top: calc(80px + env(safe-area-inset-top));
+    }
+  }
+}
+
+/*
+  5. CTA / final contact section — prevent bottom Safari bar overlap.
+     Adds bottom padding only when safe-area-inset-bottom is available
+     and non-zero (i.e. iPhone with Home Indicator).
+*/
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .cta-section {
+    padding-bottom: calc(100px + env(safe-area-inset-bottom));
+  }
+
+  @media (max-width: 768px) {
+    .cta-section {
+      padding-bottom: calc(70px + env(safe-area-inset-bottom));
+    }
+  }
+}
+
+/*
+  6. Footer — ensure last content never hides behind Safari bottom bar.
+     This is the most critical rule: the home indicator bar on
+     Face ID iPhones is ≈ 34px tall inside a 83px safe area.
+*/
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .footer-wrapper {
+    padding-bottom: calc(80px + env(safe-area-inset-bottom));
+  }
+
+  @media (max-width: 480px) {
+    .footer-wrapper {
+      padding-bottom: calc(60px + env(safe-area-inset-bottom));
+    }
+  }
+}
+
+/*
+  7. iPhone-specific spacing refinements (≤ 430px — all modern iPhones).
+     These are purely cosmetic tightening rules; they do not restructure
+     any layout.
+*/
+@media (max-width: 430px) {
+  /* Tighten hero vertical rhythm on small screens */
+  .hero-section {
+    padding-bottom: 40px;
+  }
+
+  .hero-headline {
+    font-size: 34px;
+    letter-spacing: -0.8px;
+    line-height: 1.18;
+  }
+
+  .hero-subheadline {
+    font-size: 14px;
+    margin-bottom: 28px;
+  }
+
+  /* Tighten section rhythm */
+  .section-padding {
+    padding: 56px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Prevent developer console from being too tall on iPhone SE */
+  .app-frame {
+    height: 460px;
+  }
+
+  .terminal-panel {
+    height: 140px;
+  }
+
+  /* FAQ: more breathing room for open panels */
+  .faq-item.active .faq-panel {
+    max-height: 320px;
+  }
+
+  /* CTA section title at iPhone width */
+  .cta-title {
+    font-size: 26px;
+    letter-spacing: -0.6px;
+  }
+
+  .cta-subtitle {
+    font-size: 14px;
+    margin-bottom: 28px;
+  }
+}
+
+/*
+  8. Prevent sidebar overlay from causing horizontal scroll on iPhone.
+     The .app-workspace is position:relative so absolute children
+     should be contained, but Safari can still let them bleed.
+*/
+.app-workspace {
+  overflow: hidden;
+}
+
+/*
+  9. Touch target minimum sizes for iPhone accessibility.
+     Apple HIG recommends 44×44pt minimum touch targets.
+*/
+@media (max-width: 430px) {
+  .faq-trigger {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .tech-tab-btn {
+    min-height: 40px;
+    padding: 10px 16px;
+  }
+
+  .btn-pill-black,
+  .btn-pill-secondary {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-toggle {
+    /* Larger tap target than the visual 22x14 icon */
+    padding: 8px;
+    margin: -8px;
+  }
+}
+
+/*
+  10. Prevent Safari's auto-zoom on input focus (if any inputs exist).
+      font-size must be >= 16px on inputs to avoid Safari zooming in.
+*/
+input,
+textarea,
+select {
+  font-size: 16px;
 }

@@ -25,6 +25,7 @@ export default function NavigationBar() {
           <a href="#about" className="navbar-link" onClick={() => setIsMobileActive(false)}>About</a>
           <a href="#team" className="navbar-link" onClick={() => setIsMobileActive(false)}>Team</a>
           <a href="#contact-page" className="navbar-link" onClick={() => setIsMobileActive(false)}>Contact</a>
+          <a href="#contact" className="navbar-link mobile-only-cta" onClick={() => setIsMobileActive(false)}>Book a Free Call</a>
         </nav>
 
         {/* Right Section (User Actions) */}

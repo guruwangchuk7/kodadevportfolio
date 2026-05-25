@@ -22,6 +22,14 @@ export default function DeveloperConsole() {
   // React App local state
   const [memberCount, setMemberCount] = useState(148);
 
+  // Collapse sidebars on mobile screens on mount
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.innerWidth <= 768) {
+      setLeftSidebarOpen(false);
+      setRightSidebarOpen(false);
+    }
+  }, []);
+
   const files: FileItem[] = [
     {
       id: '1',
