@@ -1,0 +1,289 @@
+# Website Content for KodaDev
+
+## HERO SECTION
+
+### Headline
+
+**Full-Stack & Blockchain Engineering for Modern Startups**
+
+### Subheadline
+
+KodaDev builds scalable web platforms, AI-powered systems, and decentralized applications for startups, founders, and fast-growing digital businesses.
+
+### CTA Buttons
+
+* **Book a Free Call**
+* **View Our Work**
+
+### Short Trust Text
+
+Trusted by startups, builders, and modern businesses to deliver scalable digital products with clean architecture and modern UI/UX.
+
+---
+
+# ABOUT SECTION
+
+## About KodaDev
+
+KodaDev is a startup-focused software engineering studio specializing in full-stack development, blockchain applications, and modern digital product development.
+
+Founded by Guru Wangchuk, KodaDev was created with a vision to help founders and businesses transform ideas into scalable digital products through modern engineering, clean architecture, and user-focused design.
+
+We work with startups, Web3 companies, agencies, and non-technical founders to build production-ready applications that are fast, scalable, and future-ready.
+
+Our expertise spans across full-stack web development, decentralized applications (dApps), AI-powered systems, smart contract engineering, and MVP development for ambitious startups.
+The company combines startup agility with strong engineering practices to deliver modern software experiences that solve real-world problems.
+
+Inspired by real product-building experience across blockchain systems, civic platforms, AI inspection tools, smart infrastructure systems, and enterprise websites, KodaDev focuses on delivering technology that is practical, scalable, and impactful. 
+
+---
+
+# SERVICES SECTION
+
+## What We Build
+
+### Full-Stack Development
+
+Modern, scalable, and high-performance web applications using modern technologies like React, Next.js, Node.js, and cloud-based architectures.
+
+### dApp Development
+
+Custom decentralized applications built for Web3 startups, DeFi platforms, NFT ecosystems, and blockchain-powered products.
+
+### Smart Contract Engineering
+
+Secure and optimized Solidity smart contracts designed for transparency, scalability, and reliability.
+
+### MVP Development
+
+Helping startups and founders rapidly turn ideas into launch-ready products with agile development and startup-focused execution.
+
+### AI Integrations
+
+Integrating intelligent automation, analytics, and AI-powered workflows into modern digital products.
+
+### UI/UX Design
+
+Minimal and user-focused interfaces designed to create intuitive digital experiences with premium aesthetics.
+
+---
+
+# WHY CHOOSE US
+
+## Why Startups Work With KodaDev
+
+### Startup-Focused Mindset
+
+We understand startup speed, iteration cycles, and the need to move fast without sacrificing quality.
+
+### Full-Stack + Blockchain Expertise
+
+From frontend interfaces to backend systems and smart contracts — everything is built under one engineering workflow.
+
+### Modern Architecture
+
+Clean, scalable, and maintainable systems designed for long-term product growth.
+
+### Fast Delivery
+
+Agile execution and rapid development cycles to help founders launch quickly.
+
+### Founder-Friendly Communication
+
+Clear collaboration, transparent workflows, and technical guidance for both technical and non-technical founders.
+
+### End-to-End Product Development
+
+From product strategy and UI/UX to deployment and scaling — we help build the complete product ecosystem.
+
+---
+
+# FEATURED PROJECTS SECTION
+
+## Selected Projects
+
+### Student Certificate Validation System Using Blockchain
+
+A blockchain-powered certificate validation system designed to improve transparency, authenticity, and fraud prevention for educational credentials. 
+
+### Himalaya Carbon Exchange
+
+A prototype sovereign carbon market platform connecting Bhutan’s National Carbon Registry with institutional buyers through blockchain-enabled workflows for carbon credit issuance and retirement. 
+
+### Bhutan Developer Network
+
+A centralized platform designed for developers, engineers, and builders in Bhutan to collaborate, build professional identity, and form technical teams within one ecosystem. 
+
+### SiteSense Live
+
+An AI-powered real-time construction inspection platform integrating live camera analysis, automated defect detection, voice interaction, and intelligent reporting workflows. 
+
+### CivicPulse
+
+A modern civic engagement platform enabling citizens to report infrastructure issues through real-time mapping and administrative management dashboards. 
+
+### Blockchain-Based Medicine Verification System
+
+A blockchain verification platform designed to improve medicine authenticity, supply-chain traceability, and pharmaceutical safety. 
+
+### Druk SmartPark
+
+A smart parking analytics and automation system integrating KPI tracking, violation monitoring, predictive insights, and operational analytics. 
+
+### Saidpiece Travels Platform
+
+A digital travel operations platform supporting itinerary management, booking coordination, analytics, and operational optimization for tourism services. 
+
+---
+
+# TECH STACK SECTION
+
+## Technologies We Use
+
+### Frontend
+
+* React
+* Next.js
+* JavaScript
+* HTML5
+* CSS3
+
+### Backend
+
+* Node.js
+* PHP
+* Laravel
+* MySQL
+
+### Blockchain
+
+* Solidity
+* Scaffold ETH
+* Smart Contracts
+* dApp Architecture
+
+### Infrastructure & Tools
+
+* Docker
+* Apache
+* Git/GitHub
+
+### Programming Languages
+
+* Python
+* C
+* C++
+* JavaScript
+* Solidity
+
+Based on the founder’s technical background and engineering experience. 
+
+---
+
+# DEVELOPMENT PROCESS SECTION
+
+## Our Process
+
+### 1. Discovery & Strategy
+
+Understanding your business goals, technical requirements, and product vision.
+
+### 2. Product Planning
+
+Defining architecture, workflows, features, and scalable technical foundations.
+
+### 3. Design & Development
+
+Building modern interfaces and scalable backend systems with agile execution.
+
+### 4. Testing & Optimization
+
+Ensuring reliability, security, performance, and clean deployment readiness.
+
+### 5. Launch & Support
+
+Deploying production-ready applications with ongoing support and iteration.
+
+---
+
+# FOUNDER SECTION
+
+## Meet the Founder
+
+### Guru Wangchuk
+
+Founder & Full-Stack Engineer
+
+Computer Application student specializing in Full Stack Development, Blockchain Engineering, and Software Systems at Chandigarh University. Experienced in building scalable applications, decentralized systems, AI-powered platforms, and startup-focused digital products. 
+
+Previously worked as:
+
+* Full Stack Engineer at Saidpiece Architecture
+* Frontend Engineer at Blockvocates
+* Web Content Writer and Startup Founder at KodaDev 
+
+---
+
+# FAQ SECTION
+
+## Frequently Asked Questions
+
+### What types of startups do you work with?
+
+We primarily work with Web3 startups, SaaS products, AI-focused platforms, and modern digital businesses.
+
+### Do you work with non-technical founders?
+
+Yes. We help non-technical founders transform ideas into scalable products through complete end-to-end development support.
+
+### Do you provide blockchain development?
+
+Yes. We specialize in dApp development, smart contracts, blockchain integrations, and decentralized product engineering.
+
+### Can you build MVPs quickly?
+
+Yes. Agile workflows and startup-focused execution allow us to rapidly build and launch MVPs.
+
+### Do you offer UI/UX design?
+
+Yes. We design modern, responsive, and user-focused interfaces optimized for usability and scalability.
+
+---
+
+# FINAL CTA SECTION
+
+## Let’s Build Something Scalable
+
+Whether you're launching a startup, building a Web3 product, or creating the next digital platform — KodaDev helps turn ideas into production-ready software.
+
+### CTA
+
+**Book a Free Call**
+
+---
+
+# FOOTER CONTENT
+
+KodaDev — Full-Stack & Blockchain Engineering
+
+Building scalable digital products for startups, Web3 companies, and modern businesses.
+
+### Links
+
+* Home
+* Services
+* Projects
+* About
+* Contact
+
+### Socials
+
+* GitHub
+* LinkedIn
+* X/Twitter
+
+### Contact
+
+[guruwangchuk1234@gmail.com](mailto:guruwangchuk1234@gmail.com)
+
+Built with modern technologies and startup-focused engineering.
