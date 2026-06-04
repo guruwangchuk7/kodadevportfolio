@@ -860,6 +860,7 @@ button {
     box-shadow: 10px 0 30px rgba(0, 0, 0, 0.08);
     background-color: #ffffff;
   }
+
   .left-sidebar.collapsed {
     width: 0;
   }
@@ -874,10 +875,11 @@ button {
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.08);
     background-color: #ffffff;
   }
+
   .right-sidebar.collapsed {
     width: 0;
   }
-  
+
   .console-section {
     padding-bottom: 80px;
   }
@@ -887,11 +889,11 @@ button {
   .app-frame {
     height: 500px;
   }
-  
+
   .code-viewport {
     padding: 12px;
   }
-  
+
   .terminal-panel {
     height: 160px;
   }
@@ -1745,7 +1747,7 @@ button {
     gap: 30px;
     padding: 24px;
   }
-  
+
   .featured-founder-portrait-box {
     max-width: 240px;
     margin: 0 auto;
@@ -1753,13 +1755,13 @@ button {
     height: auto;
     align-self: center;
   }
-  
+
   .featured-cofounder-container {
     grid-template-columns: 1fr;
     gap: 30px;
     padding: 24px;
   }
-  
+
   .cofounder-portrait-box {
     max-width: 240px;
     margin: 0 auto;
@@ -1767,7 +1769,7 @@ button {
     height: auto;
     align-self: center;
   }
-  
+
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1805,7 +1807,8 @@ button {
   }
 
   .faq-item.active .faq-panel {
-    max-height: 300px; /* more room for longer answers on mobile */
+    max-height: 300px;
+    /* more room for longer answers on mobile */
   }
 }
 
@@ -2006,6 +2009,7 @@ body {
      any layout.
 */
 @media (max-width: 430px) {
+
   /* Tighten hero vertical rhythm on small screens */
   .hero-section {
     padding-bottom: 40px;
@@ -2113,22 +2117,26 @@ select {
   height: 56px;
   width: auto;
   max-width: 100%;
+  object-fit: contain;
 }
+
 @media (max-width: 768px) {
   .navbar-logo-img {
-    height: 44px !important;
+    height: 42px !important;
   }
 }
+
 @media (max-width: 480px) {
   .navbar-logo-img {
-    height: 38px !important;
-    max-width: 140px;
+    height: 36px !important;
+    max-width: 130px;
   }
 }
+
 @media (max-width: 360px) {
   .navbar-logo-img {
-    height: 32px !important;
-    max-width: 120px;
+    height: 30px !important;
+    max-width: 110px;
   }
 }
 
@@ -2140,10 +2148,12 @@ select {
   gap: 64px;
   flex-wrap: wrap;
 }
+
 @media (max-width: 768px) {
   .trusted-companies-list {
     gap: 32px;
   }
+
   .trusted-companies-list img {
     height: 48px !important;
   }
@@ -2154,6 +2164,7 @@ select {
   font-size: 48px;
   margin-bottom: 16px;
 }
+
 .blog-post-title {
   font-size: 36px;
   font-weight: 600;
@@ -2162,15 +2173,18 @@ select {
   line-height: 1.25;
   letter-spacing: -1px;
 }
+
 .blog-posts-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
+
 @media (max-width: 768px) {
   .blog-dashboard-title {
     font-size: 32px;
   }
+
   .blog-post-title {
     font-size: 24px;
   }
@@ -2181,6 +2195,7 @@ select {
   font-size: 48px;
   margin-bottom: 16px;
 }
+
 @media (max-width: 768px) {
   .contact-dashboard-title {
     font-size: 32px;
@@ -2193,6 +2208,7 @@ select {
   min-height: 80vh;
   min-height: 80dvh;
 }
+
 @media (max-width: 768px) {
   .blog-dashboard-section {
     padding-top: 90px !important;
