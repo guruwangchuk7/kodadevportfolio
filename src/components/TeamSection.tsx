@@ -2,7 +2,7 @@ export default function TeamSection() {
   const founder = {
     initials: 'GW',
     name: 'Guru Wangchuk',
-    role: 'Founder & Full-Stack Engineer',
+    role: 'Founder & CTO',
     description: 'Computer Application student specializing in Full Stack Development, Blockchain Engineering, and Software Systems at Chandigarh University.',
     experienceTitle: 'Experience',
     experienceDesc: 'Building high-fidelity custom full-stack solutions, smart contracts, and MVPs for startups. Providing complete end-to-end development support.',
@@ -21,7 +21,7 @@ export default function TeamSection() {
   const cofounder = {
     initials: 'A',
     name: 'Arjun',
-    role: 'Co-Founder',
+    role: 'Founder & Mobile & AI Engineer',
     description: 'Operations manager directing product growth, technical strategy, and startup project coordination.',
     experienceTitle: 'Experience',
     experienceDesc: 'Spearheading product development lifecycles, operations, and technical roadmap execution for startup clients.',

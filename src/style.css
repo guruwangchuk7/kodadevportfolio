@@ -1408,6 +1408,19 @@ button {
 }
 
 /* -------------------------------------------------------------
+   Blog Dashboard Page
+   ------------------------------------------------------------- */
+.blog-card-item:hover {
+  border-color: var(--color-text-primary) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03) !important;
+}
+
+.read-more-link:hover {
+  color: var(--color-accent-coral) !important;
+}
+
+/* -------------------------------------------------------------
    Contact Dashboard Page
    ------------------------------------------------------------- */
 .contact-panel-card {

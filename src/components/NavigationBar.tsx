@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import kodaDevLogo from '../assets/KodaDevlogo.png';
 
 export default function NavigationBar() {
   const [isMobileActive, setIsMobileActive] = useState(false);
@@ -12,9 +13,8 @@ export default function NavigationBar() {
       <div className="container navbar-container">
         {/* Left Section (Branding) */}
         <div className="navbar-left">
-          <a href="#" className="navbar-left" aria-label="KodaDev Home">
-            <span className="navbar-logo" aria-hidden="true"></span>
-            <span className="navbar-brand-name">KodaDev</span>
+          <a href="#" className="navbar-left" aria-label="KodaDev Home" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+            <img src={kodaDevLogo} alt="KodaDev Logo" style={{ height: '56px', width: 'auto' }} />
           </a>
         </div>
 
@@ -24,6 +24,7 @@ export default function NavigationBar() {
           <a href="#projects" className="navbar-link" onClick={() => setIsMobileActive(false)}>Projects</a>
           <a href="#about" className="navbar-link" onClick={() => setIsMobileActive(false)}>About</a>
           <a href="#team" className="navbar-link" onClick={() => setIsMobileActive(false)}>Team</a>
+          <a href="#blog" className="navbar-link" onClick={() => setIsMobileActive(false)}>Blog</a>
           <a href="#contact-page" className="navbar-link" onClick={() => setIsMobileActive(false)}>Contact</a>
           <a href="mailto:guruwangchuk1234@gmail.com" className="navbar-link mobile-only-cta" onClick={() => setIsMobileActive(false)}>Send Message</a>
         </nav>

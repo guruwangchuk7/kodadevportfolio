@@ -1,3 +1,5 @@
+import kodaDevLogo from '../assets/KodaDevlogo.png';
+
 export default function Footer() {
   return (
     <footer className="footer-wrapper" id="page-footer">
@@ -8,8 +10,10 @@ export default function Footer() {
 
           {/* Brand block */}
           <div className="footer-brand-col">
-            <h4>KodaDev</h4>
-            <p>
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
+              <img src={kodaDevLogo} alt="KodaDev Logo" style={{ height: '48px', width: 'auto' }} />
+            </div>
+            <p style={{ marginTop: 0 }}>
               Building scalable digital products for startups, Web3 companies, and modern businesses.
             </p>
             <p style={{ marginTop: '14px', fontSize: '12px', fontWeight: 'bold' }}>
@@ -26,6 +30,7 @@ export default function Footer() {
               <a href="#projects" className="footer-link-item">Projects</a>
               <a href="#about" className="footer-link-item">About</a>
               <a href="#team" className="footer-link-item">Team</a>
+              <a href="#blog" className="footer-link-item">Blog</a>
               <a href="#contact-page" className="footer-link-item">Contact</a>
             </div>
           </div>

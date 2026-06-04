@@ -13,20 +13,36 @@ import TeamSection from './components/TeamSection';
 import FAQSection from './components/FAQSection';
 import ContactSection from './components/ContactSection';
 import ContactPage from './components/ContactPage';
+import BlogPage from './components/BlogPage';
 import Footer from './components/Footer';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'contact'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'contact' | 'blog'>('home');
 
   useEffect(() => {
     const handleHashChange = () => {
-      if (window.location.hash === '#contact-page') {
+      const hash = window.location.hash;
+      if (hash === '#contact-page') {
         const html = document.documentElement;
         const originalScrollBehavior = html.style.scrollBehavior;
         html.style.scrollBehavior = 'auto';
         
         setCurrentPage('contact');
         window.scrollTo(0, 0);
+        
+        // Restore scroll behavior in next frame
+        setTimeout(() => {
+          html.style.scrollBehavior = originalScrollBehavior;
+        }, 50);
+      } else if (hash === '#blog' || hash.startsWith('#blog-post-')) {
+        const html = document.documentElement;
+        const originalScrollBehavior = html.style.scrollBehavior;
+        html.style.scrollBehavior = 'auto';
+        
+        setCurrentPage('blog');
+        if (hash === '#blog') {
+          window.scrollTo(0, 0);
+        }
         
         // Restore scroll behavior in next frame
         setTimeout(() => {
@@ -42,6 +58,19 @@ function App() {
 
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
+
+  // Scroll to section when returning to homepage
+  useEffect(() => {
+    if (currentPage === 'home' && window.location.hash) {
+      const id = window.location.hash.substring(1);
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, [currentPage]);
 
   return (
     <>
@@ -85,8 +114,10 @@ function App() {
             {/* Let's build scalable apps final CTA */}
             <ContactSection />
           </>
-        ) : (
+        ) : currentPage === 'contact' ? (
           <ContactPage />
+        ) : (
+          <BlogPage />
         )}
       </main>
 
