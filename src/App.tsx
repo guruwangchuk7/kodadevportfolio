@@ -21,8 +21,17 @@ function App() {
   useEffect(() => {
     const handleHashChange = () => {
       if (window.location.hash === '#contact-page') {
+        const html = document.documentElement;
+        const originalScrollBehavior = html.style.scrollBehavior;
+        html.style.scrollBehavior = 'auto';
+        
         setCurrentPage('contact');
-        window.scrollTo({ top: 0 });
+        window.scrollTo(0, 0);
+        
+        // Restore scroll behavior in next frame
+        setTimeout(() => {
+          html.style.scrollBehavior = originalScrollBehavior;
+        }, 50);
       } else {
         setCurrentPage('home');
       }

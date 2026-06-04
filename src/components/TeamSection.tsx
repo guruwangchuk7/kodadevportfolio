@@ -4,7 +4,7 @@ export default function TeamSection() {
     name: 'Guru Wangchuk',
     role: 'Founder & Full-Stack Engineer',
     description: 'Computer Application student specializing in Full Stack Development, Blockchain Engineering, and Software Systems at Chandigarh University.',
-    experienceTitle: 'Guru Wangchuk Experience',
+    experienceTitle: 'Experience',
     experienceDesc: 'Building high-fidelity custom full-stack solutions, smart contracts, and MVPs for startups. Providing complete end-to-end development support.',
     bullets: [
       'Over 3 years of hands-on software engineering and decentralized application development.',
@@ -18,18 +18,26 @@ export default function TeamSection() {
     }
   };
 
+  const cofounder = {
+    initials: 'A',
+    name: 'Arjun',
+    role: 'Co-Founder',
+    description: 'Operations manager directing product growth, technical strategy, and startup project coordination.',
+    experienceTitle: 'Experience',
+    experienceDesc: 'Spearheading product development lifecycles, operations, and technical roadmap execution for startup clients.',
+    bullets: [
+      'Experienced in agile project management, coordinating engineering deliverables and client communications.',
+      'Aligning product features with business goals, user requirements, and growth KPIs.',
+      'Managing deployment cycles, quality assurance pipelines, and team operations.'
+    ],
+    socials: {
+      linkedin: 'https://linkedin.com',
+      github: 'https://github.com',
+      email: 'mailto:arjun@example.com'
+    }
+  };
+
   const otherMembers = [
-    {
-      initials: 'A',
-      name: 'Arjun',
-      role: 'Co-Founder',
-      description: 'Operations manager directing product growth, technical strategy, and startup project coordination.',
-      socials: {
-        linkedin: 'https://linkedin.com',
-        github: 'https://github.com',
-        email: 'mailto:arjun@example.com'
-      }
-    },
     {
       initials: 'T',
       name: 'Tshering',
@@ -137,6 +145,74 @@ export default function TeamSection() {
             
             <ul className="featured-experience-list">
               {founder.bullets.map((bullet, bulletIdx) => (
+                <li key={bulletIdx}>
+                  <span className="check-icon-circle" aria-hidden="true">✓</span>
+                  <span>{bullet}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Featured Co-Founder Block */}
+        <div className="featured-cofounder-container">
+          
+          {/* Left Column: Portrait Block */}
+          <div className="featured-founder-portrait-box cofounder-portrait-box">
+            <div className="featured-founder-avatar-placeholder cofounder-avatar-placeholder">
+              {cofounder.initials}
+            </div>
+          </div>
+
+          {/* Right Column: Bio & Experience */}
+          <div className="featured-founder-info">
+            <h3 className="featured-founder-name">{cofounder.name}</h3>
+            <div className="team-role" style={{ marginBottom: '16px' }}>{cofounder.role}</div>
+            <p className="featured-founder-desc">{cofounder.description}</p>
+            
+            {/* Social Icons */}
+            <div className="featured-founder-socials">
+              <a 
+                href={cofounder.socials.linkedin} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="team-social-link" 
+                aria-label={`${cofounder.name}'s LinkedIn`}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+              <a 
+                href={cofounder.socials.github} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="team-social-link" 
+                aria-label={`${cofounder.name}'s GitHub`}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+              <a 
+                href={cofounder.socials.email} 
+                className="team-social-link" 
+                aria-label={`Email ${cofounder.name}`}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <h4 className="featured-experience-title">{cofounder.experienceTitle}</h4>
+            <p className="featured-founder-desc" style={{ marginBottom: '20px' }}>{cofounder.experienceDesc}</p>
+            
+            <ul className="featured-experience-list">
+              {cofounder.bullets.map((bullet, bulletIdx) => (
                 <li key={bulletIdx}>
                   <span className="check-icon-circle" aria-hidden="true">✓</span>
                   <span>{bullet}</span>

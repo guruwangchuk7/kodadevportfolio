@@ -35,8 +35,7 @@ export default function Footer() {
             <h5 className="footer-heading">Social Handles</h5>
             <div className="footer-links-list">
               <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="footer-link-item">GitHub</a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="footer-link-item">LinkedIn</a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="footer-link-item">X / Twitter</a>
+              <a href="https://www.linkedin.com/company/kodadev/?viewAsMember=true" target="_blank" rel="noopener noreferrer" className="footer-link-item">LinkedIn</a>
             </div>
           </div>
 

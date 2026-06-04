@@ -17,7 +17,7 @@ export default function ContactSection() {
           className="btn-pill-black" 
           id="cta-email-link-btn"
         >
-          Book a Free Call
+          Send Message
         </a>
 
       </div>

@@ -15,7 +15,7 @@ export default function HeroSection() {
 
           {/* Action CTAs */}
           <div className="hero-cta-group" id="hero-cta-group">
-            <a href="#contact" className="btn-pill-black">Book a Free Call</a>
+            <a href="mailto:guruwangchuk1234@gmail.com" className="btn-pill-black">Send Message</a>
             <a href="#projects" className="btn-pill-secondary">View Our Work</a>
           </div>
 

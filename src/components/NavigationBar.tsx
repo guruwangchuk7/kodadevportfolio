@@ -25,12 +25,12 @@ export default function NavigationBar() {
           <a href="#about" className="navbar-link" onClick={() => setIsMobileActive(false)}>About</a>
           <a href="#team" className="navbar-link" onClick={() => setIsMobileActive(false)}>Team</a>
           <a href="#contact-page" className="navbar-link" onClick={() => setIsMobileActive(false)}>Contact</a>
-          <a href="#contact" className="navbar-link mobile-only-cta" onClick={() => setIsMobileActive(false)}>Book a Free Call</a>
+          <a href="mailto:guruwangchuk1234@gmail.com" className="navbar-link mobile-only-cta" onClick={() => setIsMobileActive(false)}>Send Message</a>
         </nav>
 
         {/* Right Section (User Actions) */}
         <div className="navbar-right">
-          <a href="#contact" className="btn-pill-gray">Book a Free Call</a>
+          <a href="mailto:guruwangchuk1234@gmail.com" className="btn-pill-gray">Send Message</a>
           
           {/* Mobile Hamburger Toggle */}
           <button 
