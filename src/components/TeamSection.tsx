@@ -3,7 +3,7 @@ export default function TeamSection() {
     initials: 'GW',
     name: 'Guru Wangchuk',
     role: 'Founder & CTO',
-    description: 'Computer Application student specializing in Full Stack Development, Blockchain Engineering, and Software Systems at Chandigarh University.',
+    description: 'Full-Stack & Blockchain Architect specializing in building scalable web architectures, secure smart contracts, and production-ready startup MVPs.',
     experienceTitle: 'Experience',
     experienceDesc: 'Building high-fidelity custom full-stack solutions, smart contracts, and MVPs for startups. Providing complete end-to-end development support.',
     bullets: [
@@ -22,7 +22,7 @@ export default function TeamSection() {
     initials: 'A',
     name: 'Arjun',
     role: 'Founder & Mobile & AI Engineer',
-    description: 'Operations manager directing product growth, technical strategy, and startup project coordination.',
+    description: 'Mobile & AI Systems Engineer specializing in cross-platform mobile frameworks, LLM integrations, and intelligent automation pipelines.',
     experienceTitle: 'Experience',
     experienceDesc: 'Spearheading product development lifecycles, operations, and technical roadmap execution for startup clients.',
     bullets: [

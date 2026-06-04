@@ -250,8 +250,8 @@ button {
    Hero Section
    ------------------------------------------------------------- */
 .hero-section {
-  padding-top: 180px;
-  padding-bottom: 70px;
+  padding-top: 130px;
+  padding-bottom: 120px;
   background-color: var(--color-bg-primary);
 }
 
@@ -353,8 +353,8 @@ button {
 
 @media (max-width: 768px) {
   .hero-section {
-    padding-top: 140px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 90px;
   }
 
   .hero-headline {

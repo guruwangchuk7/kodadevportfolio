@@ -22,8 +22,8 @@ export default function BlogPage() {
       content: (
         <div style={{ color: 'var(--color-text-secondary)', lineHeight: '1.8', fontSize: '15px' }}>
           <img 
-            src="/blockchain_architecture.png" 
-            alt="Blockchain Architecture Illustration" 
+            src="/hackathonteamphoto.jpg" 
+            alt="Blockchain Development Hackathon Team" 
             style={{ width: '100%', height: 'auto', borderRadius: 'var(--border-radius-app)', marginBottom: '24px', border: '1px solid var(--app-border-color)' }}
           />
           <p>Smart contract security and gas optimization are the two primary pillars of production-grade Solidity development. When deploying to Ethereum or Layer-2 rollups, every byte of storage and assembly opcode translates directly to transactional costs (gas) paid by either your users or your protocol.</p>
@@ -37,8 +37,8 @@ export default function BlogPage() {
           </ul>
 
           <img 
-            src="/blockchain_nodes.png" 
-            alt="Cryptographic Hashes and Decentralized Security" 
+            src="/stagephoto.jpg" 
+            alt="Presenting Web3 Smart Infrastructure" 
             style={{ width: '100%', height: 'auto', borderRadius: 'var(--border-radius-app)', margin: '24px 0', border: '1px solid var(--app-border-color)' }}
           />
 
@@ -58,8 +58,8 @@ export default function BlogPage() {
       content: (
         <div style={{ color: 'var(--color-text-secondary)', lineHeight: '1.8', fontSize: '15px' }}>
           <img 
-            src="/nextjs_mvp.png" 
-            alt="Next.js MVP Development Architecture" 
+            src="/guruworking.jpg" 
+            alt="Full Stack Developer coding an MVP" 
             style={{ width: '100%', height: 'auto', borderRadius: 'var(--border-radius-app)', marginBottom: '24px', border: '1px solid var(--app-border-color)' }}
           />
           <p>For modern startups, speed to market is everything. The ability to launch an MVP, collect user feedback, and iterate rapidly can mean the difference between success and failure. Next.js has emerged as the premier choice for startups looking to build fast, scalable applications.</p>
@@ -69,8 +69,8 @@ export default function BlogPage() {
           <p>Startups can fetch data directly within server components, securing APIs and database operations behind the firewall while providing a highly interactive user experience on the frontend.</p>
 
           <img 
-            src="/nextjs_server.png" 
-            alt="Sub-millisecond Server Deployments and Caching" 
+            src="/ptiching.jpg" 
+            alt="Pitching custom product solutions to partners" 
             style={{ width: '100%', height: 'auto', borderRadius: 'var(--border-radius-app)', margin: '24px 0', border: '1px solid var(--app-border-color)' }}
           />
 
@@ -89,8 +89,8 @@ export default function BlogPage() {
       content: (
         <div style={{ color: 'var(--color-text-secondary)', lineHeight: '1.8', fontSize: '15px' }}>
           <img 
-            src="/ai_workflows.png" 
-            alt="AI Workflows Neural Connections" 
+            src="/panelistforhacakthon.jpg" 
+            alt="Tech Panelists Evaluating AI Systems" 
             style={{ width: '100%', height: 'auto', borderRadius: 'var(--border-radius-app)', marginBottom: '24px', border: '1px solid var(--app-border-color)' }}
           />
           <p>Artificial Intelligence integration is no longer a luxury; it is a core feature for new startups looking to provide automated workflows, smart analytics, and interactive chat dashboards.</p>
@@ -100,8 +100,8 @@ export default function BlogPage() {
           <p>Leveraging tools like the Vercel AI SDK or direct React stream hooks ensures that tokens are rendered instantly in the client terminal viewport.</p>
 
           <img 
-            src="/ai_interface.png" 
-            alt="Vector Search Indexing and LLM pipelines" 
+            src="/guruworking.jpg" 
+            alt="AI workflow optimization and vector setup" 
             style={{ width: '100%', height: 'auto', borderRadius: 'var(--border-radius-app)', margin: '24px 0', border: '1px solid var(--app-border-color)' }}
           />
 
