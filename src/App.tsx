@@ -96,7 +96,7 @@ function App() {
                 <p style={{ fontSize: '15px', color: 'var(--color-text-secondary)', margin: '0 0 36px 0', fontWeight: 300 }}>
                   Join ambitious startups and companies building their digital products with KodaDev.
                 </p>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '64px', flexWrap: 'wrap' }}>
+                <div className="trusted-companies-list">
                   <a href="https://www.saidpiece.com/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex' }}>
                     <img 
                       src={saidpieceLogo} 

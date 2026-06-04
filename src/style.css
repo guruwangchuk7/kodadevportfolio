@@ -172,18 +172,32 @@ button {
 /* Mobile Hamburger Menu */
 .mobile-toggle {
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 22px;
-  height: 14px;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
 }
 
 .mobile-toggle span {
-  width: 100%;
+  position: absolute;
+  width: 20px;
   height: 2px;
   background-color: var(--color-text-primary);
   border-radius: 2px;
   transition: transform var(--transition-speed) var(--ease-function), opacity var(--transition-speed) var(--ease-function);
+}
+
+.mobile-toggle span:nth-child(1) {
+  transform: translateY(-6px);
+}
+
+.mobile-toggle span:nth-child(2) {
+  transform: translateY(0);
+}
+
+.mobile-toggle span:nth-child(3) {
+  transform: translateY(6px);
 }
 
 .mobile-only-cta {
@@ -193,10 +207,6 @@ button {
 /* Mobile Navbar active override states */
 @media (max-width: 768px) {
   .navbar-center {
-    display: none;
-  }
-
-  .navbar-center.mobile-active {
     display: flex;
     position: absolute;
     top: 80px;
@@ -207,7 +217,17 @@ button {
     padding: 30px 40px;
     gap: 20px;
     border-bottom: 1px solid var(--app-border-color);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.25s var(--ease-function), transform 0.25s var(--ease-function);
+  }
+
+  .navbar-center.mobile-active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 
   .mobile-toggle {
@@ -234,7 +254,7 @@ button {
   }
 
   .mobile-toggle.active span:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
+    transform: translateY(0) rotate(45deg);
   }
 
   .mobile-toggle.active span:nth-child(2) {
@@ -242,7 +262,7 @@ button {
   }
 
   .mobile-toggle.active span:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg);
+    transform: translateY(0) rotate(-45deg);
   }
 }
 
@@ -1928,8 +1948,8 @@ body {
 @supports (padding-top: env(safe-area-inset-top)) {
   @media (max-width: 768px) {
     .hero-section {
-      /* 140px (existing mobile value) + navbar-height(80px) + safe-area */
-      padding-top: calc(140px + env(safe-area-inset-top));
+      /* 100px (existing mobile value) + navbar-height(80px) + safe-area */
+      padding-top: calc(100px + env(safe-area-inset-top));
     }
   }
 }
@@ -2072,6 +2092,7 @@ body {
 
   .mobile-toggle {
     /* Larger tap target than the visual 22x14 icon */
+    box-sizing: content-box;
     padding: 8px;
     margin: -8px;
   }
@@ -2085,4 +2106,95 @@ input,
 textarea,
 select {
   font-size: 16px;
+}
+
+/* Navbar brand logo helper */
+.navbar-logo-img {
+  height: 56px;
+  width: auto;
+  max-width: 100%;
+}
+@media (max-width: 768px) {
+  .navbar-logo-img {
+    height: 44px !important;
+  }
+}
+@media (max-width: 480px) {
+  .navbar-logo-img {
+    height: 38px !important;
+    max-width: 140px;
+  }
+}
+@media (max-width: 360px) {
+  .navbar-logo-img {
+    height: 32px !important;
+    max-width: 120px;
+  }
+}
+
+/* Trusted companies logo row */
+.trusted-companies-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .trusted-companies-list {
+    gap: 32px;
+  }
+  .trusted-companies-list img {
+    height: 48px !important;
+  }
+}
+
+/* Blog page mobile scaling */
+.blog-dashboard-title {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+.blog-post-title {
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 16px 0;
+  line-height: 1.25;
+  letter-spacing: -1px;
+}
+.blog-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .blog-dashboard-title {
+    font-size: 32px;
+  }
+  .blog-post-title {
+    font-size: 24px;
+  }
+}
+
+/* Contact page mobile scaling */
+.contact-dashboard-title {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+@media (max-width: 768px) {
+  .contact-dashboard-title {
+    font-size: 32px;
+  }
+}
+
+/* Blog section wrapper padding adjustments */
+.blog-dashboard-section {
+  padding-top: 110px !important;
+  min-height: 80vh;
+  min-height: 80dvh;
+}
+@media (max-width: 768px) {
+  .blog-dashboard-section {
+    padding-top: 90px !important;
+  }
 }

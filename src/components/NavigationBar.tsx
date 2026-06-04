@@ -14,7 +14,7 @@ export default function NavigationBar() {
         {/* Left Section (Branding) */}
         <div className="navbar-left">
           <a href="#" className="navbar-left" aria-label="KodaDev Home" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-            <img src={kodaDevLogo} alt="KodaDev Logo" style={{ height: '56px', width: 'auto' }} />
+            <img src={kodaDevLogo} alt="KodaDev Logo" className="navbar-logo-img" />
           </a>
         </div>
 

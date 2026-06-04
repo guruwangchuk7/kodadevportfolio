@@ -121,7 +121,6 @@ export default function BlogPage() {
         const id = parseInt(hash.replace('#blog-post-', ''), 10);
         if (!isNaN(id)) {
           setActivePostId(id);
-          window.scrollTo(0, 0);
           return;
         }
       }
@@ -136,7 +135,7 @@ export default function BlogPage() {
   const activePost = posts.find(post => post.id === activePostId);
 
   return (
-    <section className="section-padding" id="blog-dashboard" style={{ paddingTop: '160px', minHeight: '80vh' }}>
+    <section className="section-padding blog-dashboard-section" id="blog-dashboard">
       <div className="container" style={{ maxWidth: activePost ? '800px' : '1140px' }}>
         
         {activePost ? (
@@ -156,6 +155,16 @@ export default function BlogPage() {
                   gap: '6px'
                 }}
                 className="read-more-link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setActivePostId(null);
+                  window.history.pushState(null, '', '#blog');
+                  window.dispatchEvent(new HashChangeEvent('hashchange'));
+                  const element = document.getElementById('blog-dashboard');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'auto', block: 'start' });
+                  }
+                }}
               >
                 &larr; Back to all articles
               </a>
@@ -177,14 +186,7 @@ export default function BlogPage() {
                 {activePost.category}
               </span>
               
-              <h1 style={{ 
-                fontSize: '36px', 
-                fontWeight: 600, 
-                color: 'var(--color-text-primary)', 
-                margin: '0 0 16px 0', 
-                lineHeight: '1.25',
-                letterSpacing: '-1px'
-              }}>
+              <h1 className="blog-post-title">
                 {activePost.title}
               </h1>
 
@@ -227,7 +229,7 @@ export default function BlogPage() {
             {/* Main Title & Subheadline */}
             <div style={{ textAlign: 'center', marginBottom: '60px' }}>
               <span className="section-tag-heading" style={{ display: 'block', marginBottom: '8px' }}>INVENT &amp; ITERATE</span>
-              <h1 className="section-main-title" style={{ fontSize: '48px', marginBottom: '16px' }}>
+              <h1 className="section-main-title blog-dashboard-title">
                 Blog &amp; Insights
               </h1>
               <p style={{ fontSize: '16px', color: 'var(--color-text-secondary)', maxWidth: '560px', margin: '0 auto', lineHeight: '1.6', fontWeight: 300 }}>
@@ -236,11 +238,7 @@ export default function BlogPage() {
             </div>
 
             {/* Blog Posts Grid */}
-            <div style={{ 
-              display: 'grid', 
-              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-              gap: '30px' 
-            }}>
+            <div className="blog-posts-grid">
               {posts.map(post => (
                 <article 
                   key={post.id} 
@@ -295,6 +293,16 @@ export default function BlogPage() {
                         gap: '4px'
                       }}
                       className="read-more-link"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setActivePostId(post.id);
+                        window.history.pushState(null, '', `#blog-post-${post.id}`);
+                        window.dispatchEvent(new HashChangeEvent('hashchange'));
+                        const element = document.getElementById('blog-dashboard');
+                        if (element) {
+                          element.scrollIntoView({ behavior: 'auto', block: 'start' });
+                        }
+                      }}
                     >
                       Read Article &rarr;
                     </a>

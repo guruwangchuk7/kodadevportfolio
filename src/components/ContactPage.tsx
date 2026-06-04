@@ -1,11 +1,11 @@
 export default function ContactPage() {
   return (
-    <section className="section-padding" id="contact-dashboard" style={{ paddingTop: '160px', minHeight: '80vh' }}>
+    <section className="section-padding blog-dashboard-section" id="contact-dashboard">
       <div className="container" style={{ maxWidth: '960px' }}>
         
         {/* Main Title & Subheadline */}
         <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-          <h1 className="section-main-title" style={{ fontSize: '48px', marginBottom: '16px' }}>
+          <h1 className="section-main-title contact-dashboard-title">
             Contact
           </h1>
           <p style={{ fontSize: '16px', color: 'var(--color-text-secondary)', maxWidth: '500px', margin: '0 auto', lineHeight: '1.6' }}>
