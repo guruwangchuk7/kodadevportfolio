@@ -1,74 +1,60 @@
+import guruPhoto from '../assets/teamphoto/guru.png';
+import arjunPhoto from '../assets/teamphoto/arjunmongar.png';
+import tsheringPhoto from '../assets/teamphoto/tshering.png';
+
+
 export default function TeamSection() {
+
   const founder = {
     initials: 'GW',
     name: 'Guru Wangchuk',
-    role: 'Founder & CTO',
-    description: 'Full-Stack & Blockchain Architect specializing in building scalable web architectures, secure smart contracts, and production-ready startup MVPs.',
+    role: 'Founder & Full-Stack & Blockchain Architect',
+    description: 'Full-Stack & Blockchain Architect specializing in building scalable web architectures, secure smart contracts, and production-ready startup MVPs. BCA student at Chandigarh University.',
     experienceTitle: 'Experience',
-    experienceDesc: 'Building high-fidelity custom full-stack solutions, smart contracts, and MVPs for startups. Providing complete end-to-end development support.',
+    experienceDesc: 'Over 3 years of hands-on software engineering, decentralized application development, and leading technical deliveries.',
     bullets: [
-      'Over 3 years of hands-on software engineering and decentralized application development.',
-      'Before founding KodaDev, spearheaded frontend components and decentralized integrations at Blockvocates.',
-      'Developed back-end database schemas, client workflows, and administration dashboards at Saidpiece Architecture.'
+      'Led end-to-end development of the Saidpiece Architecture website as Team Lead, designing responsive pages and optimizing performance.',
+      'Developed responsive user interfaces with React, JavaScript, and HTML/CSS for Blockvocates (Dubai, Remote).',
+      'Founded and managed KodaDev, directing startup concepts, product design execution, and business strategy.'
     ],
     socials: {
-      linkedin: 'https://linkedin.com',
-      github: 'https://github.com',
+      linkedin: 'https://lnkd.in/dw3Xf4Q6',
+      github: 'https://github.com/guruwangchuk7',
       email: 'mailto:guruwangchuk1234@gmail.com'
     }
   };
 
   const cofounder = {
-    initials: 'A',
-    name: 'Arjun',
-    role: 'Founder & Mobile & AI Engineer',
-    description: 'Mobile & AI Systems Engineer specializing in cross-platform mobile frameworks, LLM integrations, and intelligent automation pipelines.',
-    experienceTitle: 'Experience',
-    experienceDesc: 'Spearheading product development lifecycles, operations, and technical roadmap execution for startup clients.',
+    initials: 'AM',
+    name: 'Arjun Mongar',
+    role: 'Co-Founder & Mobile & AI Engineer',
+    description: 'Computer Science graduate and software developer with 2+ years of hands-on experience delivering production-grade mobile (Flutter) and full-stack (MERN) systems.',
+    experienceTitle: 'Experience & Competencies',
+    experienceDesc: 'Managing the full software development lifecycle from client requirements gathering through architecture design, testing, and stores deployment.',
     bullets: [
-      'Experienced in agile project management, coordinating engineering deliverables and client communications.',
-      'Aligning product features with business goals, user requirements, and growth KPIs.',
-      'Managing deployment cycles, quality assurance pipelines, and team operations.'
+      'Built and delivered ST Motors EV mobile app live on both Play Store and App Store as sole developer.',
+      'Solo-designed and developed Ziilinkz, a real-time taxi booking application deployed live in Bhutan.',
+      'Highly skilled in Flutter (Dart), JavaScript (MERN Stack), Python, technical writing, and Agile/UAT methodology.'
     ],
     socials: {
       linkedin: 'https://linkedin.com',
       github: 'https://github.com',
-      email: 'mailto:arjun@example.com'
+      email: 'mailto:arjunmongar45@gmail.com'
     }
   };
+
 
   const otherMembers = [
     {
       initials: 'T',
       name: 'Tshering',
+      photo: tsheringPhoto,
       role: 'Frontend Developer',
       description: 'UI engineer crafting responsive, high-performance, and beautifully animated frontend components.',
       socials: {
         linkedin: 'https://linkedin.com',
         github: 'https://github.com',
         email: 'mailto:tshering@example.com'
-      }
-    },
-    {
-      initials: 'LJ',
-      name: 'Lhawang Jamtsho',
-      role: 'QA Engineer',
-      description: 'Specialist in automated testing, reliability guarantees, and end-to-end user flow verification.',
-      socials: {
-        linkedin: 'https://linkedin.com',
-        github: 'https://github.com',
-        email: 'mailto:lhawang@example.com'
-      }
-    },
-    {
-      initials: 'SR',
-      name: 'Sangay Rinchen',
-      role: 'QA Engineer',
-      description: 'Ensuring seamless delivery through smart contract auditing, vulnerability scanning, and testing diagnostics.',
-      socials: {
-        linkedin: 'https://linkedin.com',
-        github: 'https://github.com',
-        email: 'mailto:sangay@example.com'
       }
     }
   ];
@@ -91,9 +77,11 @@ export default function TeamSection() {
           
           {/* Left Column: Portrait Block */}
           <div className="featured-founder-portrait-box">
-            <div className="featured-founder-avatar-placeholder">
-              {founder.initials}
-            </div>
+            <img 
+              src={guruPhoto} 
+              alt={founder.name} 
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            />
           </div>
 
           {/* Right Column: Bio & Experience */}
@@ -159,9 +147,11 @@ export default function TeamSection() {
           
           {/* Left Column: Portrait Block */}
           <div className="featured-founder-portrait-box cofounder-portrait-box">
-            <div className="featured-founder-avatar-placeholder cofounder-avatar-placeholder">
-              {cofounder.initials}
-            </div>
+            <img 
+              src={arjunPhoto} 
+              alt={cofounder.name} 
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            />
           </div>
 
           {/* Right Column: Bio & Experience */}
@@ -233,9 +223,17 @@ export default function TeamSection() {
               <div className="team-card" key={index}>
                 {/* Colored Top half box representing portrait */}
                 <div className={`team-card-portrait-box portrait-color-${index}`}>
-                  <div className="team-card-avatar-placeholder">
-                    {member.initials}
-                  </div>
+                  {member.photo ? (
+                    <img 
+                      src={member.photo} 
+                      alt={member.name} 
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
+                  ) : (
+                    <div className="team-card-avatar-placeholder">
+                      {member.initials}
+                    </div>
+                  )}
                 </div>
 
                 {/* Bottom Text Area */}
