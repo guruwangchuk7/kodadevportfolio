@@ -13,7 +13,7 @@ export default function ServicesSection() {
     },
     {
       title: 'dApp Development',
-      description: 'Custom decentralized applications built for Web3 startups, DeFi platforms, NFT ecosystems, and blockchain-powered products.',
+      description: 'Custom decentralized applications built for Web3 ecosystems, DeFi platforms, and blockchain-powered products.',
       icon: (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 2L2 7l10 5 10-5-10-5z" />
@@ -37,7 +37,7 @@ export default function ServicesSection() {
     },
     {
       title: 'MVP Development',
-      description: 'Helping startups and founders rapidly turn ideas into launch-ready products with agile development and startup-focused execution.',
+      description: 'Helping founders and businesses rapidly turn ideas into launch-ready products with agile development and product-focused execution.',
       icon: (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />

@@ -8,7 +8,7 @@ export default function ContactSection() {
         
         {/* Subtitle */}
         <p className="cta-subtitle" id="cta-supporting-text">
-          Whether you're launching a startup, building a Web3 product, or creating the next digital platform — KodaDev helps turn ideas into production-ready software.
+          Whether you are launching a new product, building a Web3 project, or creating a custom platform — KodaDev helps turn ideas into production-ready software.
         </p>
 
         {/* CTA Trigger button */}

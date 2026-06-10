@@ -2,8 +2,8 @@ export default function WhyChooseUs() {
   const points = [
     {
       num: '01',
-      title: 'Startup-Focused Mindset',
-      text: 'We understand startup speed, iteration cycles, and the need to move fast without sacrificing quality.'
+      title: 'Agile Team Mindset',
+      text: 'We understand fast-paced iteration cycles, diverse business requirements, and the need to deliver high quality on schedule.'
     },
     {
       num: '02',
@@ -39,7 +39,7 @@ export default function WhyChooseUs() {
         {/* Header */}
         <div>
           <span className="section-tag-heading">Value Proposition</span>
-          <h2 className="section-main-title">Why Startups Work With KodaDev</h2>
+          <h2 className="section-main-title">Why Clients Work With KodaDev</h2>
         </div>
 
         {/* Why Grid */}

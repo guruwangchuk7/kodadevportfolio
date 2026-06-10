@@ -14,7 +14,7 @@ export default function Footer() {
               <img src={kodaDevLogo} alt="KodaDev Logo" style={{ height: '48px', width: 'auto' }} />
             </div>
             <p style={{ marginTop: 0 }}>
-              Building scalable digital products for startups, Web3 companies, and modern businesses.
+              Building scalable digital products for modern brands, Web3 platforms, and businesses of all sizes.
             </p>
             <p style={{ marginTop: '14px', fontSize: '12px', fontWeight: 'bold' }}>
               Full-Stack &amp; Blockchain Engineering
@@ -62,7 +62,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} KodaDev. All rights reserved.
           </div>
           <div className="footer-copyright" style={{ color: 'var(--color-text-secondary)' }}>
-            Built with modern technologies and startup-focused engineering.
+            Built with modern technologies and client-focused engineering.
           </div>
         </div>
 

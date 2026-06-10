@@ -8,8 +8,8 @@ export default function TeamSection() {
   const founder = {
     initials: 'GW',
     name: 'Guru Wangchuk',
-    role: 'Founder & Full-Stack & Blockchain Architect',
-    description: 'Full-Stack & Blockchain Architect specializing in building scalable web architectures, secure smart contracts, and production-ready startup MVPs. BCA student at Chandigarh University.',
+    role: 'Founder & Full-Stack & Blockchain Engineer',
+    description: 'Full-Stack & Blockchain Engineer specializing in building scalable web architectures, secure smart contracts, and production-ready digital products. BCA student at Chandigarh University.',
     experienceTitle: 'Experience',
     experienceDesc: 'Over 3 years of hands-on software engineering, decentralized application development, and leading technical deliveries.',
     bullets: [
@@ -27,7 +27,7 @@ export default function TeamSection() {
   const cofounder = {
     initials: 'AM',
     name: 'Arjun Mongar',
-    role: 'Co-Founder & Mobile & AI Engineer',
+    role: 'Founder & Mobile & AI Engineer',
     description: 'Computer Science graduate and software developer with 2+ years of hands-on experience delivering production-grade mobile (Flutter) and full-stack (MERN) systems.',
     experienceTitle: 'Experience & Competencies',
     experienceDesc: 'Managing the full software development lifecycle from client requirements gathering through architecture design, testing, and stores deployment.',
@@ -46,15 +46,15 @@ export default function TeamSection() {
 
   const otherMembers = [
     {
-      initials: 'T',
-      name: 'Tshering',
+      initials: 'TTY',
+      name: 'Tshering Thinley Yangden',
       photo: tsheringPhoto,
       role: 'Frontend Developer',
-      description: 'UI engineer crafting responsive, high-performance, and beautifully animated frontend components.',
+      description: 'UI/UX Designer & Frontend Developer studying ICT at Rangsit University. Deployed ERP BI analytics dashboards and AI prototypes; proficient in React, CSS3, JavaScript, Python, and Dart.',
       socials: {
-        linkedin: 'https://linkedin.com',
-        github: 'https://github.com',
-        email: 'mailto:tshering@example.com'
+        linkedin: 'https://linkedin.com/in/ttyangden',
+        github: 'https://github.com/tshering877',
+        email: 'mailto:tsheringthinley.y66@rsu.ac.th'
       }
     }
   ];

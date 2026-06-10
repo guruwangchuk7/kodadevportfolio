@@ -5,12 +5,12 @@ export default function FAQSection() {
 
   const faqs = [
     {
-      q: 'What types of startups do you work with?',
-      a: 'We primarily work with Web3 startups, SaaS products, AI-focused platforms, and modern digital businesses.'
+      q: 'What types of clients and projects do you work with?',
+      a: 'We work with a wide range of clients, including Web3 teams, SaaS platforms, AI-focused products, corporate brands, and local businesses looking to build high-quality websites, software, and mobile apps.'
     },
     {
       q: 'Do you work with non-technical founders?',
-      a: 'Yes. We help non-technical founders transform ideas into scalable products through complete end-to-end development support.'
+      a: 'Yes. We help non-technical founders and clients transform ideas into scalable products through complete end-to-end development support.'
     },
     {
       q: 'Do you provide blockchain development?',
@@ -18,7 +18,7 @@ export default function FAQSection() {
     },
     {
       q: 'Can you build MVPs quickly?',
-      a: 'Yes. Agile workflows and startup-focused execution allow us to rapidly build and launch MVPs.'
+      a: 'Yes. Agile workflows and efficient execution allow us to rapidly build and launch MVPs.'
     },
     {
       q: 'Do you offer UI/UX design?',

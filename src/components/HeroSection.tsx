@@ -5,12 +5,12 @@ export default function HeroSection() {
         <div className="hero-content">
           {/* Main Headline */}
           <h1 className="hero-headline" id="main-headline">
-            Full-Stack &amp; Blockchain <span>Engineering for Modern Startups</span>
+            Full-Stack &amp; Blockchain <span>Engineering for Modern Clients</span>
           </h1>
 
           {/* Subheadline */}
           <p className="hero-subheadline" id="subheadline-copy">
-            KodaDev builds scalable web platforms, AI-powered systems, and decentralized applications for startups, founders, and fast-growing digital businesses.
+            KodaDev builds scalable web platforms, AI-powered systems, and decentralized applications for founders, modern brands, and businesses of all sizes.
           </p>
 
           {/* Action CTAs */}
@@ -21,7 +21,7 @@ export default function HeroSection() {
 
           {/* Trust Caption */}
           <p className="hero-trust-text" id="hero-trust-text">
-            Trusted by startups, builders, and modern businesses to deliver scalable digital products with clean architecture and modern UI/UX.
+            Trusted by companies, builders, and modern brands to deliver scalable digital products with clean architecture and modern UI/UX.
           </p>
         </div>
       </div>

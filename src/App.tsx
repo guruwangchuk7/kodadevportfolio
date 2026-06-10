@@ -6,6 +6,7 @@ import AboutSection from './components/AboutSection';
 import ServicesSection from './components/ServicesSection';
 import WhyChooseUs from './components/WhyChooseUs';
 import ProjectsSection from './components/ProjectsSection';
+import ProjectsSoldSection from './components/ProjectsSoldSection';
 import TechStackTabs from './components/TechStackTabs';
 import TeamSection from './components/TeamSection';
 import FAQSection from './components/FAQSection';
@@ -15,6 +16,7 @@ import BlogPage from './components/BlogPage';
 import Footer from './components/Footer';
 import saidpieceLogo from './assets/trustedbycompanies/saidpiecelogo.png';
 import stmotorLogo from './assets/trustedbycompanies/stmotor.jpg';
+import helptourismLogo from './assets/trustedbycompanies/new.png';
 
 function App() {
   const [currentPage, setCurrentPage] = useState<'home' | 'contact' | 'blog'>('home');
@@ -23,31 +25,9 @@ function App() {
     const handleHashChange = () => {
       const hash = window.location.hash;
       if (hash === '#contact-page') {
-        const html = document.documentElement;
-        const originalScrollBehavior = html.style.scrollBehavior;
-        html.style.scrollBehavior = 'auto';
-        
         setCurrentPage('contact');
-        window.scrollTo(0, 0);
-        
-        // Restore scroll behavior in next frame
-        setTimeout(() => {
-          html.style.scrollBehavior = originalScrollBehavior;
-        }, 50);
       } else if (hash === '#blog' || hash.startsWith('#blog-post-')) {
-        const html = document.documentElement;
-        const originalScrollBehavior = html.style.scrollBehavior;
-        html.style.scrollBehavior = 'auto';
-        
         setCurrentPage('blog');
-        if (hash === '#blog') {
-          window.scrollTo(0, 0);
-        }
-        
-        // Restore scroll behavior in next frame
-        setTimeout(() => {
-          html.style.scrollBehavior = originalScrollBehavior;
-        }, 50);
       } else {
         setCurrentPage('home');
       }
@@ -59,16 +39,35 @@ function App() {
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
+  // Handle instant scroll to top on page switch without smooth scroll animation
+  useEffect(() => {
+    const html = document.documentElement;
+    const originalScrollBehavior = html.style.scrollBehavior;
+    html.style.scrollBehavior = 'auto';
+    window.scrollTo(0, 0);
+    
+    const timer = setTimeout(() => {
+      html.style.scrollBehavior = originalScrollBehavior;
+    }, 100);
+
+    return () => {
+      clearTimeout(timer);
+      html.style.scrollBehavior = originalScrollBehavior;
+    };
+  }, [currentPage]);
+
   // Scroll to section when returning to homepage
   useEffect(() => {
-    if (currentPage === 'home' && window.location.hash) {
+    if (currentPage === 'home' && window.location.hash && window.location.hash !== '#') {
       const id = window.location.hash.substring(1);
-      setTimeout(() => {
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
+      if (id !== 'contact-page' && !id.startsWith('blog')) {
+        setTimeout(() => {
+          const element = document.getElementById(id);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 150);
+      }
     }
   }, [currentPage]);
 
@@ -94,25 +93,34 @@ function App() {
                   Trusted by
                 </h2>
                 <p style={{ fontSize: '15px', color: 'var(--color-text-secondary)', margin: '0 0 36px 0', fontWeight: 300 }}>
-                  Join ambitious startups and companies building their digital products with KodaDev.
+                  Join ambitious brands and companies building their digital products with KodaDev.
                 </p>
-                <div className="trusted-companies-list">
+                <div className="trusted-companies-list" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '48px', flexWrap: 'wrap' }}>
                   <a href="https://www.saidpiece.com/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex' }}>
-                    <img 
-                      src={saidpieceLogo} 
-                      alt="Saidpiece Architecture" 
-                      style={{ height: '64px', width: 'auto', opacity: 0.5, filter: 'grayscale(100%)', transition: 'opacity 0.2s, filter 0.2s' }}
-                      onMouseOver={(e) => { e.currentTarget.style.opacity = '1'; e.currentTarget.style.filter = 'none'; }}
-                      onMouseOut={(e) => { e.currentTarget.style.opacity = '0.5'; e.currentTarget.style.filter = 'grayscale(100%)'; }}
+                    <img
+                      src={saidpieceLogo}
+                      alt="Saidpiece Architecture"
+                      style={{ height: '64px', width: 'auto', opacity: 0.85, transition: 'opacity 0.2s, transform 0.2s' }}
+                      onMouseOver={(e) => { e.currentTarget.style.opacity = '1'; e.currentTarget.style.transform = 'scale(1.05)'; }}
+                      onMouseOut={(e) => { e.currentTarget.style.opacity = '0.85'; e.currentTarget.style.transform = 'none'; }}
                     />
                   </a>
                   <a href="https://www.stmotors.bt/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex' }}>
-                    <img 
-                      src={stmotorLogo} 
-                      alt="ST Motor" 
-                      style={{ height: '60px', width: 'auto', opacity: 0.5, filter: 'grayscale(100%)', transition: 'opacity 0.2s, filter 0.2s' }}
-                      onMouseOver={(e) => { e.currentTarget.style.opacity = '1'; e.currentTarget.style.filter = 'none'; }}
-                      onMouseOut={(e) => { e.currentTarget.style.opacity = '0.5'; e.currentTarget.style.filter = 'grayscale(100%)'; }}
+                    <img
+                      src={stmotorLogo}
+                      alt="ST Motor"
+                      style={{ height: '60px', width: 'auto', opacity: 0.85, transition: 'opacity 0.2s, transform 0.2s' }}
+                      onMouseOver={(e) => { e.currentTarget.style.opacity = '1'; e.currentTarget.style.transform = 'scale(1.05)'; }}
+                      onMouseOut={(e) => { e.currentTarget.style.opacity = '0.85'; e.currentTarget.style.transform = 'none'; }}
+                    />
+                  </a>
+                  <a href="https://helptourbhutan.com/" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex' }}>
+                    <img
+                      src={helptourismLogo}
+                      alt="Help Tourism Bhutan"
+                      style={{ height: '55px', width: 'auto', opacity: 0.85, transition: 'opacity 0.2s, transform 0.2s' }}
+                      onMouseOver={(e) => { e.currentTarget.style.opacity = '1'; e.currentTarget.style.transform = 'scale(1.05)'; }}
+                      onMouseOut={(e) => { e.currentTarget.style.opacity = '0.85'; e.currentTarget.style.transform = 'none'; }}
                     />
                   </a>
                 </div>
@@ -128,10 +136,11 @@ function App() {
             {/* Eight selected portfolio projects grid */}
             <ProjectsSection />
 
+            {/* Acquired products and sold projects showcase */}
+            <ProjectsSoldSection />
+
             {/* Tech stack category filters */}
             <TechStackTabs />
-
-
 
             {/* Team grid profiles */}
             <TeamSection />
